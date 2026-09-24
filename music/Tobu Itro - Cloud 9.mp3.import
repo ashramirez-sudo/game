@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gcpixdd8iljb"
+path="res://.godot/imported/Tobu Itro - Cloud 9.mp3-c0da3a19fef6a9adc9c0e9d632a8b8eb.mp3str"
+
+[deps]
+
+source_file="res://music/Tobu Itro - Cloud 9.mp3"
+dest_files=["res://.godot/imported/Tobu Itro - Cloud 9.mp3-c0da3a19fef6a9adc9c0e9d632a8b8eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

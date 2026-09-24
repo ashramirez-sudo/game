@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcrda8j0kbsu5"]
+
+[sub_resource type="GDScript" id="GDScript_bu8ng"]
+resource_name = "song_card.gd"
+script/source = "extends Button
+signal song_selected(song_id: String)
+var song_id: String = \"\"
+func setup(id: String, song_info: Dictionary):
+	song_id = id
+	$HBoxContainer/VBoxContainer/TitleLabel.text = song_info.get(\"title\", \"Unknown Title\")
+	$HBoxContainer/VBoxContainer/ArtistLabel.text = song_info.get(\"artist\", \"Unknown Artist\")
+	$HBoxContainer/VBoxContainer/DifficultyLabel.text = \"Difficulty: \" + song_info.get(\"difficulty\", \"Normal\")
+	
+	if song_info.get(\"cover\"):
+		$HBoxContainer/TextureRect.texture = song_info.get(\"cover\")
+func _on_pressed():
+	song_selected.emit(song_id)
+"
+
+[node name="SongButton" type="Node2D"]
+script = SubResource("GDScript_bu8ng")
+
+[node name="SongCard" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SongCard"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoverArt" type="TextureRect" parent="SongCard/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SongCard/HBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="SongCard/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ArtistLabel" type="Label" parent="SongCard/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DifficultyLabel" type="Label" parent="SongCard/HBoxContainer/VBoxContainer"]
+layout_mode = 2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlu7cgovfjpad"
+path="res://.godot/imported/Nightcore - Rumors But it hits different Lyrics.mp3-44ccaf92057d752bb410d94fe0a8c0a7.mp3str"
+
+[deps]
+
+source_file="res://music/Nightcore - Rumors But it hits different Lyrics.mp3"
+dest_files=["res://.godot/imported/Nightcore - Rumors But it hits different Lyrics.mp3-44ccaf92057d752bb410d94fe0a8c0a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

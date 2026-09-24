@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rjc346p7eoem"
+path="res://.godot/imported/Sweet Little Monster - Nightcore _ Pop Electronic Song.mp3-0de5dba7907d402ffdf6655d80aa6ef0.mp3str"
+
+[deps]
+
+source_file="res://music/Sweet Little Monster - Nightcore _ Pop Electronic Song.mp3"
+dest_files=["res://.godot/imported/Sweet Little Monster - Nightcore _ Pop Electronic Song.mp3-0de5dba7907d402ffdf6655d80aa6ef0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvgksxdffxfv0"]
+
+[ext_resource type="Texture2D" uid="uid://cfw807dtx6tsm" path="res://Art/new arrows atempt 8.png" id="1_p2j78"]
+[ext_resource type="Script" uid="uid://c6pf68s1my0ur" path="res://Objects/key_listener.gd" id="2_p2j78"]
+[ext_resource type="AudioStream" uid="uid://b1rasxmrq7231" path="res://HitSounds/Osu hit sound.wav" id="3_pf4tl"]
+
+[sub_resource type="Animation" id="Animation_pf4tl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowOverlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1.3, 1.3, 1.3, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p2j78"]
+resource_name = "key_hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowOverlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.28, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1.3, 1.3, 1.3, 1), Color(1.30196, 1.30196, 1.30196, 0), Color(1.30196, 1.30196, 1.30196, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fuyel"]
+_data = {
+&"RESET": SubResource("Animation_pf4tl"),
+&"key_hit": SubResource("Animation_p2j78")
+}
+
+[node name="KeyListener" type="Sprite2D"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_p2j78")
+hframes = 4
+vframes = 3
+script = ExtResource("2_p2j78")
+
+[node name="RandomSpawnTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="GlowOverlay" type="Sprite2D" parent="."]
+modulate = Color(1.3, 1.3, 1.3, 1)
+self_modulate = Color(1, 1, 0.00392157, 1)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_p2j78")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fuyel")
+}
+autoplay = "key_hit"
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pf4tl")
+volume_db = 16.0
+
+[connection signal="timeout" from="RandomSpawnTimer" to="." method="_on_random_spawn_timer_timeout"]

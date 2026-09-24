@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq3vlj7xb4bte"]
+
+[ext_resource type="Script" uid="uid://ety20srit0uq" path="res://levels/game_ui.gd" id="1_451jp"]
+[ext_resource type="FontFile" uid="uid://c4x5aumj4bu4v" path="res://Art/Atop-R99O3.ttf" id="2_tpbhn"]
+[ext_resource type="PackedScene" uid="uid://cdtbjkaaxsfbg" path="res://healthbar/health_bar.tscn" id="3_healthbar"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_451jp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AccuracyLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_top = 87.0
+offset_right = 170.0
+offset_bottom = 143.0
+
+[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 192.0
+offset_bottom = 50.0
+theme_override_fonts/normal_font = ExtResource("2_tpbhn")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 11
+theme_override_font_sizes/mono_font_size = 16
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 9
+text = "0 pts"
+scroll_active = false
+
+[node name="ComboLabel" type="RichTextLabel" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 12.0
+offset_top = 50.0
+offset_right = 191.0
+offset_bottom = 88.0
+theme_override_fonts/normal_font = ExtResource("2_tpbhn")
+theme_override_font_sizes/bold_italics_font_size = 11
+theme_override_font_sizes/italics_font_size = 11
+theme_override_font_sizes/mono_font_size = 16
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 9
+text = "0X COMBO"
+scroll_active = false
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("3_healthbar")]

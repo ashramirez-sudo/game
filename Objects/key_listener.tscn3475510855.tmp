@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6g3im74jwlu5"]
+
+[ext_resource type="Texture2D" uid="uid://dyf01g67tsbui" path="res://Art/arrows.webp" id="1_cnhan"]
+[ext_resource type="Script" uid="uid://c6pf68s1my0ur" path="res://Objects/key_listener.gd" id="2_p2j78"]
+
+[node name="KeyListener" type="Sprite2D"]
+texture = ExtResource("1_cnhan")
+hframes = 4
+vframes = 3
+script = ExtResource("2_p2j78")
+key_name = null
