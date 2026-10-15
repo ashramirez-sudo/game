@@ -132,6 +132,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_bgbeb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7ijgj")
 text = "QUIT TO SONG SELECT"
 
-[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/RetryButton" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/RetryButton" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

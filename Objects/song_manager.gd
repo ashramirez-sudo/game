@@ -26,13 +26,13 @@ var songs: Dictionary = {
 		"title": "Ochame Kinou",
 		"artist": "Hololive",
 		"difficulty": "Hard",
-		"path": "res://music/おちゃめ機能ホロライブが吹っ切れた24人で歌ってみた.mp3",
+		"path": "res://music/Ochame Kinou.mp3",
 		"chart": "res://charts/ochame_kinou.json"
 	},
 	"kaiju": {
 		"title": "Kaiju (怪獣)",
 		"artist": "Sakanaction",
-		"difficulty": "Normal",
+		"difficulty": "Hard",
 		"path": "res://music/サカナクション 怪獣 -Music Video-.mp3",
 		"chart": "res://charts/kaiju.json"
 	},
@@ -49,12 +49,12 @@ var songs: Dictionary = {
 		"difficulty": "Expert",
 		"path": "res://music/You & Me (feat. Nikolett).mp3",
 	},
-	"sweet_little_monster": {
+	"sweet_little_monster_nightcore_pop_electronic_song": {
 		"title": "Sweet Little monster",
 		"artist": "SatilmisNCSR",
 		"difficulty": "Expert",
 		"path": "res://music/Sweet Little Monster - Nightcore _ Pop Electronic Song.mp3",
-		"chart": "res://charts/sweet_little_monster.json"
+		"chart": "res://charts/sweet_little_monster_nightcore_pop_electronic_song.json"
 	}
 }
 
